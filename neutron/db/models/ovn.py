@@ -50,8 +50,8 @@ class OVNHashRing(model_base.BASEV2):
     __tablename__ = 'ovn_hash_ring'
 
     node_uuid = sa.Column(sa.String(36), nullable=False, index=True)
-    group_name = sa.Column(sa.String(256), nullable=False, index=True)
-    hostname = sa.Column(sa.String(256), nullable=False)
+    group_name = sa.Column(sa.String(255), nullable=False, index=True)
+    hostname = sa.Column(sa.String(255), nullable=False)
     created_at = sa.Column(sa.DateTime(), default=timeutils.utcnow,
                            nullable=False)
     updated_at = sa.Column(sa.DateTime(), default=timeutils.utcnow,
